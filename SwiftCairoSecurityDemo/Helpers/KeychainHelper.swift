@@ -12,7 +12,7 @@ class KeychainHelper {
         let account = credentials.username
         let password = credentials.password.data(using: String.Encoding.utf8)!
         let keychainQuery: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
+            kSecClass as String: kSecClassInternetPassword,
             kSecAttrAccount as String: account,
             kSecAttrServer as String: server,
             kSecValueData as String: password
@@ -24,11 +24,14 @@ class KeychainHelper {
     }
     static func readFromKeychain(server: String) throws -> Credentials {
         let keychainQuery: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
+            kSecClass as String: kSecClassInternetPassword,
             kSecAttrServer as String: server,
+            kSecReturnAttributes as String: true,
+            kSecReturnData as String: true,
+            kSecMatchLimit as String: kSecMatchLimitOne
         ]
 
-        var dataTypeRef: AnyObject? = nil
+        var dataTypeRef: CFTypeRef? = nil
         let status = SecItemCopyMatching(keychainQuery as CFDictionary, &dataTypeRef)
 
         guard status == errSecSuccess else { throw KeychainError(status: status) }
@@ -42,4 +45,21 @@ class KeychainHelper {
         }
         return Credentials(username: account, password: password)
     }
+    static func deleteFromKeychain(server: String) throws {
+        let keychainQuery: [String: Any] = [
+            kSecClass as String: kSecClassInternetPassword,
+            kSecAttrServer as String: server
+        ]
+        
+        let status = SecItemDelete(keychainQuery as CFDictionary)
+        
+        guard status == errSecSuccess || status == errSecItemNotFound else { throw KeychainError(status: status) }
+        
+        if status == errSecSuccess {
+            print("Item successfully deleted from the keychain.")
+        } else if status == errSecItemNotFound {
+            print("No item found for the given server.")
+        }
+    }
+
 }

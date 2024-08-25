@@ -13,11 +13,13 @@ class LoginManager: ObservableObject {
     @Published var password: String
     @Published var isBiometricEnabled: Bool
     @Published var isSecuredBiometricEnabled: Bool
+    @Published var showBiometricsLoginView: Bool
     @Published var biometricType: LABiometryType = .none
     @Published var usernameError: String?
     @Published var passwordError: String?
     @Published var authenticationError: String?
     private let isLoggedInKey = "isLoggedIn"
+    private let showBiometricsLoginViewKey = "showBiometricsLoginView"
     private let isBiometricEnabledKey = "isBiometricEnabled"
     private let isSecuredBiometricEnabledKey = "isSecuredBiometricEnabled"
     private let server = "www.namespaceserver.com"
@@ -27,6 +29,7 @@ class LoginManager: ObservableObject {
         self.isLoggedIn = UserDefaults.standard.bool(forKey: isLoggedInKey)
         self.isBiometricEnabled = true
         self.isSecuredBiometricEnabled = false
+        self.showBiometricsLoginView = UserDefaults.standard.bool(forKey: showBiometricsLoginViewKey)
     }
 
     func login() {
@@ -40,16 +43,33 @@ class LoginManager: ObservableObject {
                 return
             }
         }
+
+        let credentials = Credentials(username: username, password: password)
+        // Best practice: Consider encrypting sensitive data using a robust encryption algorithm before storing it.
         if isBiometricEnabled {
+            do {
+                try KeychainHelper.saveToKeychain(credentials, server: server)
+                showBioLoginView(true)
+            } catch {
+                handleError(error)
+            }
         }
         if isSecuredBiometricEnabled {
         }
-        saveToggles()
     }
 
     func logout() {
-        self.isLoggedIn = false
-        UserDefaults.standard.set(false, forKey: isLoggedInKey)
+        do {
+            try KeychainHelper.deleteFromKeychain(server: server)
+
+            self.isLoggedIn = false
+            UserDefaults.standard.set(false, forKey: isLoggedInKey)
+
+            showBioLoginView(false)
+        } catch {
+            handleError(error)
+        }
+        
     }
 
     func updateToggleA(_ value: Bool) {
@@ -94,9 +114,9 @@ class LoginManager: ObservableObject {
             }
         }
     }
-    private func saveToggles() {
-        UserDefaults.standard.set(isBiometricEnabled, forKey: isBiometricEnabledKey)
-        UserDefaults.standard.set(isSecuredBiometricEnabled, forKey: isSecuredBiometricEnabledKey)
+    private func showBioLoginView(_ value: Bool) {
+        showBiometricsLoginView = value
+        UserDefaults.standard.setValue(value, forKey: showBiometricsLoginViewKey)
     }
     private func unSecureAuth() {
         let context = LAContext()
