@@ -27,9 +27,13 @@ class LoginManager: ObservableObject {
         self.username = ""
         self.password = ""
         self.isLoggedIn = UserDefaults.standard.bool(forKey: isLoggedInKey)
-        self.isBiometricEnabled = true
-        self.isSecuredBiometricEnabled = false
+        self.isBiometricEnabled = UserDefaults.standard.bool(forKey: isBiometricEnabledKey)
+        self.isSecuredBiometricEnabled = UserDefaults.standard.bool(forKey: isSecuredBiometricEnabledKey)
         self.showBiometricsLoginView = UserDefaults.standard.bool(forKey: showBiometricsLoginViewKey)
+        if !isBiometricEnabled && !isSecuredBiometricEnabled {
+            isBiometricEnabled = true
+            saveToggles()
+        }
     }
 
     func login() {
@@ -73,12 +77,14 @@ class LoginManager: ObservableObject {
         print("Value updated toggleA \(value)")
         isBiometricEnabled = value
         isSecuredBiometricEnabled = !value
+        saveToggles()
     }
     
     func updateToggleB(_ value: Bool) {
         print("Value updated toggleB \(value)")
         isSecuredBiometricEnabled = value
         isBiometricEnabled = !value
+        saveToggles()
     }
 
     func detectBiometricType() {
@@ -122,6 +128,11 @@ class LoginManager: ObservableObject {
             return true
         }
     }
+    private func saveToggles() {
+        UserDefaults.standard.set(isBiometricEnabled, forKey: isBiometricEnabledKey)
+        UserDefaults.standard.set(isSecuredBiometricEnabled, forKey: isSecuredBiometricEnabledKey)
+    }
+
     private func showBioLoginView(_ value: Bool) {
         showBiometricsLoginView = value
         UserDefaults.standard.setValue(value, forKey: showBiometricsLoginViewKey)
