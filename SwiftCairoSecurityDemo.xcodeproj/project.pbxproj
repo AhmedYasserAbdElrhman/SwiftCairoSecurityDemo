@@ -19,6 +19,8 @@
 		94D97BAD2C7B14F400CBAC2C /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97BAC2C7B14F400CBAC2C /* KeychainError.swift */; };
 		94D97BAF2C7B162600CBAC2C /* BiometricLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97BAE2C7B162600CBAC2C /* BiometricLoginView.swift */; };
 		94D97BB12C7B235400CBAC2C /* LABiometryTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97BB02C7B235400CBAC2C /* LABiometryTypeExtension.swift */; };
+		94D97BB32C7B319F00CBAC2C /* SecuredKeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97BB22C7B319F00CBAC2C /* SecuredKeychainHelper.swift */; };
+		94D97BB52C7B33FA00CBAC2C /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97BB42C7B33FA00CBAC2C /* LoginForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		94D97BAC2C7B14F400CBAC2C /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
 		94D97BAE2C7B162600CBAC2C /* BiometricLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricLoginView.swift; sourceTree = "<group>"; };
 		94D97BB02C7B235400CBAC2C /* LABiometryTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LABiometryTypeExtension.swift; sourceTree = "<group>"; };
+		94D97BB22C7B319F00CBAC2C /* SecuredKeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuredKeychainHelper.swift; sourceTree = "<group>"; };
+		94D97BB42C7B33FA00CBAC2C /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +94,10 @@
 		94D97BA02C7A99C200CBAC2C /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				94D97B9C2C7A940E00CBAC2C /* LoginView.swift */,
 				94D97BA12C7A99D200CBAC2C /* LoginManager.swift */,
+				94D97B9C2C7A940E00CBAC2C /* LoginView.swift */,
 				94D97BAE2C7B162600CBAC2C /* BiometricLoginView.swift */,
+				94D97BB42C7B33FA00CBAC2C /* LoginForm.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 			children = (
 				94D97BA72C7B142000CBAC2C /* KeychainHelper.swift */,
 				94D97BB02C7B235400CBAC2C /* LABiometryTypeExtension.swift */,
+				94D97BB22C7B319F00CBAC2C /* SecuredKeychainHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -199,6 +205,8 @@
 				94D97BAB2C7B14C900CBAC2C /* Credentials.swift in Sources */,
 				94D97BAD2C7B14F400CBAC2C /* KeychainError.swift in Sources */,
 				94D97BB12C7B235400CBAC2C /* LABiometryTypeExtension.swift in Sources */,
+				94D97BB32C7B319F00CBAC2C /* SecuredKeychainHelper.swift in Sources */,
+				94D97BB52C7B33FA00CBAC2C /* LoginForm.swift in Sources */,
 				94D97B9F2C7A945300CBAC2C /* HomeView.swift in Sources */,
 				94A63B5E2C77E35F008B1898 /* ContentView.swift in Sources */,
 				94A63B5C2C77E35F008B1898 /* SwiftCairoSecurityDemoApp.swift in Sources */,

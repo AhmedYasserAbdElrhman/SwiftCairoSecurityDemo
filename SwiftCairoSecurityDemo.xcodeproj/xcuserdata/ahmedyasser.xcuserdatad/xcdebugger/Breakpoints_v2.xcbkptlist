@@ -3,4 +3,100 @@
    uuid = "9CA47303-E952-45A0-8324-61745374DE50"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76ACBF5B-302D-419B-A5D7-AC4DB7703D3F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftCairoSecurityDemo/Login/LoginManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "login()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "76ACBF5B-302D-419B-A5D7-AC4DB7703D3F - dece79ef5716ca9b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftCairoSecurityDemo.LoginManager.login() -&gt; ()"
+                  moduleName = "SwiftCairoSecurityDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedyasser/Documents/SwiftCairoSecurityDemo/SwiftCairoSecurityDemo/Login/LoginManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "664">
+               </Location>
+               <Location
+                  uuid = "76ACBF5B-302D-419B-A5D7-AC4DB7703D3F - bfccd1e7fa852070"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in SwiftCairoSecurityDemo.LoginManager.login() -&gt; ()"
+                  moduleName = "SwiftCairoSecurityDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedyasser/Documents/SwiftCairoSecurityDemo/SwiftCairoSecurityDemo/Login/LoginManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "76ACBF5B-302D-419B-A5D7-AC4DB7703D3F - dece79ef5716ca9b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftCairoSecurityDemo.LoginManager.login() -&gt; ()"
+                  moduleName = "SwiftCairoSecurityDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedyasser/Documents/SwiftCairoSecurityDemo/SwiftCairoSecurityDemo/Login/LoginManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "784">
+               </Location>
+               <Location
+                  uuid = "76ACBF5B-302D-419B-A5D7-AC4DB7703D3F - dece79ef5716ca9b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftCairoSecurityDemo.LoginManager.login() -&gt; ()"
+                  moduleName = "SwiftCairoSecurityDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedyasser/Documents/SwiftCairoSecurityDemo/SwiftCairoSecurityDemo/Login/LoginManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDECEB5C-63AE-4B45-A102-CCEA69C561D4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftCairoSecurityDemo/Login/LoginForm.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -33,16 +33,7 @@ class LoginManager: ObservableObject {
     }
 
     func login() {
-        validate()
-        if usernameError != nil || passwordError != nil {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                withAnimation {
-                    self.usernameError = nil
-                    self.passwordError = nil
-                }
-                return
-            }
-        }
+        guard validate() else { return }
 
         let credentials = Credentials(username: username, password: password)
         // Best practice: Consider encrypting sensitive data using a robust encryption algorithm before storing it.
@@ -55,6 +46,12 @@ class LoginManager: ObservableObject {
             }
         }
         if isSecuredBiometricEnabled {
+            do {
+                try SecuredKeychainHelper.addCredentials(credentials, server: server)
+                showBioLoginView(true)
+            } catch {
+                handleError(error)
+            }
         }
     }
 
@@ -99,10 +96,10 @@ class LoginManager: ObservableObject {
             unSecureAuth()
         }
         if isSecuredBiometricEnabled {
-            secureAuth()
+            securedAuth()
         }
     }
-    private func validate() {
+    private func validate() -> Bool {
         if username.count < 4 {
             withAnimation {
                 usernameError = "Username must be at least 4 characters long."
@@ -112,6 +109,17 @@ class LoginManager: ObservableObject {
             withAnimation {
                 passwordError = "Password must be at least 4 characters"
             }
+        }
+        if usernameError != nil || passwordError != nil {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                withAnimation {
+                    self.usernameError = nil
+                    self.passwordError = nil
+                }
+            }
+            return false
+        } else {
+            return true
         }
     }
     private func showBioLoginView(_ value: Bool) {
@@ -144,7 +152,13 @@ class LoginManager: ObservableObject {
             self.authenticationError = "Biometric authentication is not available on this device."
         }
     }
-    private func secureAuth() {
+    private func securedAuth() {
+        do {
+            let credentials = try SecuredKeychainHelper.readCredentials(server: server)
+            self.login(with: credentials)
+        } catch {
+            handleError(error)
+        }
         
     }
     private func handleError(_ error: Error?) {

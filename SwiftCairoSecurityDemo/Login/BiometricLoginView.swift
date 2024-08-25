@@ -43,12 +43,6 @@ struct BiometricLoginView: View {
                     }
                 }
                 .padding(.horizontal, 40)
-
-                if let error = loginManager.authenticationError {
-                    Text(error)
-                        .foregroundColor(.red)
-                        .padding(.top, 10)
-                }
             }
         }
         .onAppear {

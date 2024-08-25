@@ -23,7 +23,7 @@ struct HomeView: View {
             if loginManager.isSecuredBiometricEnabled {
                 Text("🤝")
                     .font(.system(size: 100))
-                
+
             }
             Button(action: {
                 // Handle logout action
