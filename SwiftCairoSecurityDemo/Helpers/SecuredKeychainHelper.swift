@@ -28,8 +28,8 @@ class SecuredKeychainHelper {
                                     kSecUseAuthenticationContext as String: context,
                                     kSecValueData as String: password]
 
+        SecItemDelete(query as CFDictionary) // Delete existing item if any
         let status = SecItemAdd(query as CFDictionary, nil)
-        if status == errSecDuplicateItem { return }
         guard status == errSecSuccess else { throw KeychainError(status: status) }
     }
 
