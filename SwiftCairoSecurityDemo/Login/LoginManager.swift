@@ -18,7 +18,6 @@ class LoginManager: ObservableObject {
     @Published var usernameError: String?
     @Published var passwordError: String?
     @Published var authenticationError: String?
-    private let isLoggedInKey = "isLoggedIn"
     private let showBiometricsLoginViewKey = "showBiometricsLoginView"
     private let isBiometricEnabledKey = "isBiometricEnabled"
     private let isSecuredBiometricEnabledKey = "isSecuredBiometricEnabled"
@@ -26,7 +25,7 @@ class LoginManager: ObservableObject {
     init() {
         self.username = ""
         self.password = ""
-        self.isLoggedIn = UserDefaults.standard.bool(forKey: isLoggedInKey)
+        self.isLoggedIn = false
         self.isBiometricEnabled = UserDefaults.standard.bool(forKey: isBiometricEnabledKey)
         self.isSecuredBiometricEnabled = UserDefaults.standard.bool(forKey: isSecuredBiometricEnabledKey)
         self.showBiometricsLoginView = UserDefaults.standard.bool(forKey: showBiometricsLoginViewKey)
@@ -64,8 +63,7 @@ class LoginManager: ObservableObject {
             try KeychainHelper.deleteFromKeychain(server: server)
 
             self.isLoggedIn = false
-            UserDefaults.standard.set(false, forKey: isLoggedInKey)
-
+            
             showBioLoginView(false)
         } catch {
             handleError(error)
@@ -185,7 +183,6 @@ class LoginManager: ObservableObject {
         // Call login API
         DispatchQueue.main.async {
             self.isLoggedIn = true
-            UserDefaults.standard.set(true, forKey: self.isLoggedInKey)
         }
     }
 }
