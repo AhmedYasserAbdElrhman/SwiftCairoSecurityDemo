@@ -14,6 +14,11 @@
 		94D97B9D2C7A940E00CBAC2C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B9C2C7A940E00CBAC2C /* LoginView.swift */; };
 		94D97B9F2C7A945300CBAC2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B9E2C7A945300CBAC2C /* HomeView.swift */; };
 		94D97BA22C7A99D200CBAC2C /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97BA12C7A99D200CBAC2C /* LoginManager.swift */; };
+		94D97BA82C7B142000CBAC2C /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97BA72C7B142000CBAC2C /* KeychainHelper.swift */; };
+		94D97BAB2C7B14C900CBAC2C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97BAA2C7B14C900CBAC2C /* Credentials.swift */; };
+		94D97BAD2C7B14F400CBAC2C /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97BAC2C7B14F400CBAC2C /* KeychainError.swift */; };
+		94D97BAF2C7B162600CBAC2C /* BiometricLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97BAE2C7B162600CBAC2C /* BiometricLoginView.swift */; };
+		94D97BB12C7B235400CBAC2C /* LABiometryTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D97BB02C7B235400CBAC2C /* LABiometryTypeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		94D97B9C2C7A940E00CBAC2C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		94D97B9E2C7A945300CBAC2C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		94D97BA12C7A99D200CBAC2C /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		94D97BA72C7B142000CBAC2C /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		94D97BAA2C7B14C900CBAC2C /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		94D97BAC2C7B14F400CBAC2C /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
+		94D97BAE2C7B162600CBAC2C /* BiometricLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricLoginView.swift; sourceTree = "<group>"; };
+		94D97BB02C7B235400CBAC2C /* LABiometryTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LABiometryTypeExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +67,14 @@
 		94A63B5A2C77E35F008B1898 /* SwiftCairoSecurityDemo */ = {
 			isa = PBXGroup;
 			children = (
+				94A63B612C77E361008B1898 /* Preview Content */,
+				94A63B5F2C77E361008B1898 /* Assets.xcassets */,
 				94A63B5B2C77E35F008B1898 /* SwiftCairoSecurityDemoApp.swift */,
 				94A63B5D2C77E35F008B1898 /* ContentView.swift */,
-				94A63B5F2C77E361008B1898 /* Assets.xcassets */,
-				94A63B612C77E361008B1898 /* Preview Content */,
+				94D97BA92C7B14AC00CBAC2C /* Models */,
+				94D97BA62C7AAD8400CBAC2C /* Helpers */,
 				94D97BA02C7A99C200CBAC2C /* Login */,
-				94D97B9E2C7A945300CBAC2C /* HomeView.swift */,
+				94D97BA32C7AAD6800CBAC2C /* Home */,
 			);
 			path = SwiftCairoSecurityDemo;
 			sourceTree = "<group>";
@@ -80,8 +92,35 @@
 			children = (
 				94D97B9C2C7A940E00CBAC2C /* LoginView.swift */,
 				94D97BA12C7A99D200CBAC2C /* LoginManager.swift */,
+				94D97BAE2C7B162600CBAC2C /* BiometricLoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		94D97BA32C7AAD6800CBAC2C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				94D97B9E2C7A945300CBAC2C /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		94D97BA62C7AAD8400CBAC2C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				94D97BA72C7B142000CBAC2C /* KeychainHelper.swift */,
+				94D97BB02C7B235400CBAC2C /* LABiometryTypeExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		94D97BA92C7B14AC00CBAC2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94D97BAA2C7B14C900CBAC2C /* Credentials.swift */,
+				94D97BAC2C7B14F400CBAC2C /* KeychainError.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,10 +194,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				94D97BA22C7A99D200CBAC2C /* LoginManager.swift in Sources */,
+				94D97BA82C7B142000CBAC2C /* KeychainHelper.swift in Sources */,
 				94D97B9D2C7A940E00CBAC2C /* LoginView.swift in Sources */,
+				94D97BAB2C7B14C900CBAC2C /* Credentials.swift in Sources */,
+				94D97BAD2C7B14F400CBAC2C /* KeychainError.swift in Sources */,
+				94D97BB12C7B235400CBAC2C /* LABiometryTypeExtension.swift in Sources */,
 				94D97B9F2C7A945300CBAC2C /* HomeView.swift in Sources */,
 				94A63B5E2C77E35F008B1898 /* ContentView.swift in Sources */,
 				94A63B5C2C77E35F008B1898 /* SwiftCairoSecurityDemoApp.swift in Sources */,
+				94D97BAF2C7B162600CBAC2C /* BiometricLoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

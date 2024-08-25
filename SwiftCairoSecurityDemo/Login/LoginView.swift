@@ -26,13 +26,27 @@ struct LoginView: View {
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(10)
                     .padding(.bottom, 20)
-                
+                if let usernameError = loginManager.usernameError {
+                    Text(usernameError)
+                        .foregroundColor(.red)
+                        .font(.caption)
+                        .padding(.top, 5)
+                        .transition(.opacity)
+                        .animation(.easeInOut(duration: 0.3), value: loginManager.usernameError)
+                }
                 SecureField("Password", text: $password)
                     .padding()
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(10)
                     .padding(.bottom, 20)
-                
+                if let passwordError = loginManager.passwordError {
+                    Text(passwordError)
+                        .foregroundColor(.red)
+                        .font(.caption)
+                        .padding(.top, 5)
+                        .transition(.opacity)
+                        .animation(.easeInOut(duration: 0.3), value: loginManager.passwordError)
+                }
                 Toggle("Enable Biometric Login", isOn: $loginManager.isBiometricEnabled)
                     .padding()
                     .onChange(of: loginManager.isBiometricEnabled) { newValue in
@@ -44,8 +58,7 @@ struct LoginView: View {
                         loginManager.updateToggleB(newValue)
                     }
                     Button(action: {
-                        loginManager.login(username: username, password: password)
-                        loginManager.isLoggedIn = true
+                        loginManager.login()
                     }) {
                         Text("Login")
                             .font(.headline)
