@@ -38,6 +38,34 @@ struct BiometricLoginView: View {
                 }
             }
             .padding(.horizontal, 40)
+
+            if let error = loginManager.authenticationError {
+                Text(error)
+                    .foregroundColor(.red)
+                    .padding(.top, 10)
+                Button(action: {
+                    // Handle logout action
+                    loginManager.logout()
+                }) {
+                    HStack {
+                        Image(systemName: "power")
+                            .font(.system(size: 24))
+                            .foregroundColor(.white)
+                        Text("Logout")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                    }
+                    .padding()
+                    .background(
+                        LinearGradient(gradient: Gradient(colors: [Color.purple, Color.orange]), startPoint: .leading, endPoint: .trailing)
+                    )
+                    .cornerRadius(10)
+                    .shadow(radius: 5)
+                }
+                .padding()
+
+            }
+
         }
         .onAppear {
             loginManager.detectBiometricType()

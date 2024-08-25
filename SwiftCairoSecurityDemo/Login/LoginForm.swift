@@ -65,6 +65,11 @@ struct LoginForm: View {
                         .cornerRadius(10)
                 }
                 .padding(.top, 20)
+                if let error = loginManager.authenticationError {
+                    Text(error)
+                        .foregroundColor(.red)
+                        .padding(.top, 10)
+                }
                 Spacer()
             }
         }

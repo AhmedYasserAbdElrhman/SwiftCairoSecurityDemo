@@ -63,7 +63,7 @@ class LoginManager: ObservableObject {
             try KeychainHelper.deleteFromKeychain(server: server)
 
             self.isLoggedIn = false
-            
+            self.authenticationError = nil
             showBioLoginView(false)
         } catch {
             handleError(error)

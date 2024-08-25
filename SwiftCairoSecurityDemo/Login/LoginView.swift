@@ -18,11 +18,6 @@ struct LoginView: View {
                 LoginForm()
                     .environmentObject(loginManager)
             }
-            if let error = loginManager.authenticationError {
-                Text(error)
-                    .foregroundColor(.red)
-                    .padding(.top, 10)
-            }
         }
         .padding()
     }
