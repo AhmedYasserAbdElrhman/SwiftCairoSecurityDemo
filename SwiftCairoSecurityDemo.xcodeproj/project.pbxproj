@@ -39,6 +39,7 @@
 		94D97BB02C7B235400CBAC2C /* LABiometryTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LABiometryTypeExtension.swift; sourceTree = "<group>"; };
 		94D97BB22C7B319F00CBAC2C /* SecuredKeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuredKeychainHelper.swift; sourceTree = "<group>"; };
 		94D97BB42C7B33FA00CBAC2C /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		94D97BB62C7D01A600CBAC2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 		94A63B5A2C77E35F008B1898 /* SwiftCairoSecurityDemo */ = {
 			isa = PBXGroup;
 			children = (
+				94D97BB62C7D01A600CBAC2C /* Info.plist */,
 				94A63B612C77E361008B1898 /* Preview Content */,
 				94A63B5F2C77E361008B1898 /* Assets.xcassets */,
 				94A63B5B2C77E35F008B1898 /* SwiftCairoSecurityDemoApp.swift */,
@@ -347,6 +349,7 @@
 				DEVELOPMENT_TEAM = P565D8BB32;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftCairoSecurityDemo/Info.plist;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = Login;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -378,6 +381,7 @@
 				DEVELOPMENT_TEAM = P565D8BB32;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftCairoSecurityDemo/Info.plist;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = Login;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

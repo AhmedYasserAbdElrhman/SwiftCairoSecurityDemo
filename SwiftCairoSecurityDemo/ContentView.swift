@@ -21,6 +21,9 @@ struct ContentView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle()) // Ensures the correct behavior on all devices
+        .onAppear(perform: {
+            UserDefaults.standard.set("12345abcde67890fghijklmno12345pqrstuvw", forKey: "api_key")
+        })
     }
 }
 
