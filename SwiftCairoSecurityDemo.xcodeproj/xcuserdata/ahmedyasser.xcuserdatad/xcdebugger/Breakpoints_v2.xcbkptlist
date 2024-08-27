@@ -49,6 +49,21 @@
                   endingLineNumber = "26"
                   offsetFromSymbolStart = "3324">
                </Location>
+               <Location
+                  uuid = "DDECEB5C-63AE-4B45-A102-CCEA69C561D4 - 81c387b90e6d79bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.animation&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(_: Swift.Optional&lt;SwiftUI.Animation&gt;, value: &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.animation&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(_: Swift.Optional&lt;SwiftUI.Animation&gt;, value: &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.animation&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(_: Swift.Optional&lt;SwiftUI.Animation&gt;, value: &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.animation&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(_: Swift.Optional&lt;SwiftUI.Animation&gt;, value: &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt;&gt; in SwiftCairoSecurityDemo.LoginForm.body.getter : some"
+                  moduleName = "SwiftCairoSecurityDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedyasser/Documents/SwiftCairoSecurityDemo/SwiftCairoSecurityDemo/Login/LoginForm.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "2888">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -62,10 +77,138 @@
             filePath = "SwiftCairoSecurityDemo/Helpers/SecuredKeychainHelper.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "readCredentials(server:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5076062D-8DFF-4057-B5BA-D1AFC7900FDC - 89a1d7c64a7b38d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SwiftCairoSecurityDemo.SecuredKeychainHelper.readCredentials(server: Swift.String) throws -&gt; SwiftCairoSecurityDemo.Credentials"
+                  moduleName = "SwiftCairoSecurityDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedyasser/Documents/SwiftCairoSecurityDemo/SwiftCairoSecurityDemo/Helpers/SecuredKeychainHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "1992">
+               </Location>
+               <Location
+                  uuid = "5076062D-8DFF-4057-B5BA-D1AFC7900FDC - 89a1d7c64a7b38d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SwiftCairoSecurityDemo.SecuredKeychainHelper.readCredentials(server: Swift.String) throws -&gt; SwiftCairoSecurityDemo.Credentials"
+                  moduleName = "SwiftCairoSecurityDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedyasser/Documents/SwiftCairoSecurityDemo/SwiftCairoSecurityDemo/Helpers/SecuredKeychainHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "2012">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E32D8E7F-D752-4FA6-AA09-635FFDD91ACA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftCairoSecurityDemo/Helpers/SecuredKeychainHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "readCredentials(server:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E32D8E7F-D752-4FA6-AA09-635FFDD91ACA - 89a1d7c64a7b387e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SwiftCairoSecurityDemo.SecuredKeychainHelper.readCredentials(server: Swift.String) throws -&gt; SwiftCairoSecurityDemo.Credentials"
+                  moduleName = "SwiftCairoSecurityDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedyasser/Documents/SwiftCairoSecurityDemo/SwiftCairoSecurityDemo/Helpers/SecuredKeychainHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "2300">
+               </Location>
+               <Location
+                  uuid = "E32D8E7F-D752-4FA6-AA09-635FFDD91ACA - 89a1d7c64a7b387e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SwiftCairoSecurityDemo.SecuredKeychainHelper.readCredentials(server: Swift.String) throws -&gt; SwiftCairoSecurityDemo.Credentials"
+                  moduleName = "SwiftCairoSecurityDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedyasser/Documents/SwiftCairoSecurityDemo/SwiftCairoSecurityDemo/Helpers/SecuredKeychainHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "2320">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC58A053-D36D-4594-B85B-79BD756C0DA2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftCairoSecurityDemo/Login/LoginManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "unSecureAuth()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FC58A053-D36D-4594-B85B-79BD756C0DA2 - 8baa37974408913a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftCairoSecurityDemo.LoginManager.login(with: SwiftCairoSecurityDemo.Credentials) -&gt; ()"
+                  moduleName = "SwiftCairoSecurityDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedyasser/Documents/SwiftCairoSecurityDemo/SwiftCairoSecurityDemo/Login/LoginManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "372">
+               </Location>
+               <Location
+                  uuid = "FC58A053-D36D-4594-B85B-79BD756C0DA2 - 625c26b72312c342"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftCairoSecurityDemo.LoginManager.unSecureAuth() -&gt; ()"
+                  moduleName = "SwiftCairoSecurityDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedyasser/Documents/SwiftCairoSecurityDemo/SwiftCairoSecurityDemo/Login/LoginManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "560">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

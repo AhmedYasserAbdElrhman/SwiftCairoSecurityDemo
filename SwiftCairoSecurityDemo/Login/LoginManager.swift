@@ -35,7 +35,7 @@ class LoginManager: ObservableObject {
         }
     }
 
-    func login() {
+    func creatAccount() {
         guard validate() else { return }
 
         let credentials = Credentials(username: username, password: password)
@@ -158,7 +158,7 @@ class LoginManager: ObservableObject {
             }
         } else {
             // Biometric authentication is not available
-            self.authenticationError = "Biometric authentication is not available on this device."
+            self.handleError(error)
         }
     }
     private func securedAuth() {

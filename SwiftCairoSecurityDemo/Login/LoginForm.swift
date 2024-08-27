@@ -12,7 +12,7 @@ struct LoginForm: View {
     var body: some View {
         ScrollView {
             VStack {
-                Text("Login")
+                Text("Signup")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.bottom, 40)
@@ -54,9 +54,9 @@ struct LoginForm: View {
                         loginManager.updateToggleB(newValue)
                     }
                 Button(action: {
-                    loginManager.login()
+                    loginManager.creatAccount()
                 }) {
-                    Text("Login")
+                    Text("Create Account")
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding()
